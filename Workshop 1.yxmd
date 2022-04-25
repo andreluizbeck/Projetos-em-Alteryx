@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\adc.abarboza_ifood3r\Pictures\Alteryx\Edgecate\Alteryx\Course Files\9.1 HR File.xlsx|||`2018 HR File$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>9.1 HR File.xlsx
+Query=`2018 HR File$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Emp ID" source="File: C:\Users\adc.abarboza_ifood3r\Pictures\Alteryx\Edgecate\Alteryx\Course Files\9.1 HR File.xlsx|||`2018 HR File$`" type="Double" />
+            <Field name="First Name" size="255" source="File: C:\Users\adc.abarboza_ifood3r\Pictures\Alteryx\Edgecate\Alteryx\Course Files\9.1 HR File.xlsx|||`2018 HR File$`" type="V_String" />
+            <Field name="Last Name" size="255" source="File: C:\Users\adc.abarboza_ifood3r\Pictures\Alteryx\Edgecate\Alteryx\Course Files\9.1 HR File.xlsx|||`2018 HR File$`" type="V_String" />
+            <Field name="Position" size="255" source="File: C:\Users\adc.abarboza_ifood3r\Pictures\Alteryx\Edgecate\Alteryx\Course Files\9.1 HR File.xlsx|||`2018 HR File$`" type="V_String" />
+            <Field name="BU Code" size="255" source="File: C:\Users\adc.abarboza_ifood3r\Pictures\Alteryx\Edgecate\Alteryx\Course Files\9.1 HR File.xlsx|||`2018 HR File$`" type="V_String" />
+            <Field name="BU Desc" size="255" source="File: C:\Users\adc.abarboza_ifood3r\Pictures\Alteryx\Edgecate\Alteryx\Course Files\9.1 HR File.xlsx|||`2018 HR File$`" type="V_String" />
+            <Field name="Current Salary" source="File: C:\Users\adc.abarboza_ifood3r\Pictures\Alteryx\Edgecate\Alteryx\Course Files\9.1 HR File.xlsx|||`2018 HR File$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="198" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Null()" field="Payrise" size="8" type="Double" />
+            <FormulaField expression="Null()" field="Comission" size="8" type="Double" />
+            <FormulaField expression="Null()" field="Bonus" size="8" type="Double" />
+            <FormulaField expression="Null()" field="Fringe Benefits" size="8" type="Double" />
+            <FormulaField expression="&quot;C:\Users\adc.abarboza_ifood3r\Pictures\Alteryx\&quot; + [BU Code] + &quot;.xlsx|&quot; + [BU Code]" field="File" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Payrise = Null()
+Comission = Null()
+Bonus = Null()
+Fringe Benefits = Null()
+File...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="378" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\ADC~1.ABA\AppData\Local\Temp\Engine_13428_8fb430d95d27466f86b9a22ce8c3e1c5_\Engine_21060_f998b77a74184308ae3753b4521d3d7e_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Perfil</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="330" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\adc.abarboza_ifood3r\Pictures\Alteryx\Edgecate\Alteryx\Workshop 1.xlsx|||Planilha1</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>RemoveFile</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="True" />
+          <MultiFileType>Path</MultiFileType>
+          <MultiFileField>File</MultiFileField>
+          <KeepField value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Workshop 1.xlsx
+Query=Planilha1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Workshop 1</Name>
+      <Description>Neste Workflow, é realizada a separação do arquivo HR File por BU, salvando uma versão em excel para cada uma delas</Description>
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="32461fc7-241b-40ca-b5e3-43c4b65eae64" />
+      <Telemetry>
+        <PreviousWorkflowId value="5f85c0f4-13bc-46fe-af32-a74e4116279b" />
+        <OriginWorkflowId value="5f85c0f4-13bc-46fe-af32-a74e4116279b" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
